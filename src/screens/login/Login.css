@@ -1,0 +1,19 @@
+.login_card {
+  width: 30%;
+  height: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.dispNone {
+  display: none;
+}
+
+.dispBlock {
+  display: block;
+}
+
+.red {
+  color: red;
+}
