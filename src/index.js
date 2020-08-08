@@ -9,8 +9,8 @@ import "fontsource-roboto";
 
 ReactDOM.render(
   <div>
-    <Login />
-    {/* <Home /> */}
+    {/* <Login /> */}
+    <Home />
   </div>,
   document.getElementById("root")
 );

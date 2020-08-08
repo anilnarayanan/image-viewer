@@ -9,6 +9,7 @@ import Icon from "@material-ui/core/Icon";
 import userprofile_logo from "../../assets/user-profile.png";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import SimpleMenu from "./profile_menu";
 
 class Header extends Component {
   render() {
@@ -41,11 +42,11 @@ class Header extends Component {
             </div>
           </div>
           <div>
-            <IconButton>
+            {/* <IconButton>
               <img src={userprofile_logo} width="50" height="50" />
-            </IconButton>
+            </IconButton> */}
           </div>
-          <div class="dropdown">
+          {/* <div class="dropdown">
             <button onclick="" class="dropbtn">
               Dropdown
             </button>
@@ -54,7 +55,8 @@ class Header extends Component {
               <a href="#about">About</a>
               <a href="#contact">Contact</a>
             </div>
-          </div>
+          </div> */}
+          <SimpleMenu />
         </header>
       </div>
     );
