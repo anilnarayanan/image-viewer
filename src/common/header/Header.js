@@ -8,8 +8,8 @@ import IconButton from "@material-ui/core/IconButton";
 import Icon from "@material-ui/core/Icon";
 import userprofile_logo from "../../assets/user-profile.png";
 import SearchBar from "./SearchBar";
-
 import ProfileMenu from "./profile_menu";
+import Home from "../../screens/home/Home";
 
 class Header extends Component {
   render() {
@@ -30,6 +30,7 @@ class Header extends Component {
             <div className="app_logo">Image Viewer</div>
             <SearchBar />
             <ProfileMenu />
+            <Home />
           </header>
         )}
       </div>

@@ -18,6 +18,7 @@ class Login extends Component {
     super();
     sessionStorage.setItem("access-token", null);
     this.state = {
+      login_card_display: "login_card",
       username: "",
       usernameValidation: "dispNone",
       password: "",
@@ -43,7 +44,10 @@ class Login extends Component {
       this.state.uname === this.state.username &&
       this.state.pwd === this.state.password
     ) {
-      this.setState({ credentialValidation: "dispNone" });
+      this.setState({
+        login_card_display: "dispNone",
+        credentialValidation: "dispNone",
+      });
       sessionStorage.setItem("access-token", this.state.instaToken);
       alert("success");
     } else if (this.state.username === "" && this.state.password === "") {
@@ -67,7 +71,8 @@ class Login extends Component {
         <div>
           <Header />
         </div>
-        <div className="login_card">
+        {/* <div className="login_card"> */}
+        <div className={this.state.login_card_display}>
           <Card>
             <CardContent>
               <h2>LOGIN</h2>
