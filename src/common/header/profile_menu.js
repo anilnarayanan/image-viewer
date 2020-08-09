@@ -5,7 +5,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import userprofile_logo from "../../assets/user-profile.png";
 import Divider from "@material-ui/core/Divider";
 
-export default function SimpleMenu() {
+export default function ProfileMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {

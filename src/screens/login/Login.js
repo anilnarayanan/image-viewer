@@ -22,7 +22,8 @@ class Login extends Component {
       password: "",
       passwordValidation: "dispNone",
       credentialValidation: "dispNone",
-      instaToken: "",
+      instaToken:
+        "EAANUIdAue9QBAKcAZCcNPa96BoNSkDBp2v9Cw0QmHt6y8zir2F5Gpi5En7gSkM9ZBAT2KQgimRM51cmJSJ4pUKGjaV10e3U5wtBf6ZCaTKYSR1naTdlXn1XnZBB0aoGktX3KjqRxiwKpuoX5NlxawS2ZCirIWlCAZD",
       uname: "anilnarayanan@hotmail.com",
       pwd: "welcome123",
     };
@@ -42,6 +43,7 @@ class Login extends Component {
       this.state.pwd === this.state.password
     ) {
       this.setState({ credentialValidation: "dispNone" });
+      sessionStorage.setItem("auth-token", this.state.instaToken);
       alert("success");
     } else if (this.state.username === "" && this.state.password === "") {
       this.setState({

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 // import './screens/login/Login';
 import Login from "./screens/login/Login";
@@ -9,8 +10,8 @@ import "fontsource-roboto";
 
 ReactDOM.render(
   <div>
-    {/* <Login /> */}
-    <Home />
+    <Login />
+    {/* <Home /> */}
   </div>,
   document.getElementById("root")
 );
