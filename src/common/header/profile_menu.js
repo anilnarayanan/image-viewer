@@ -4,6 +4,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import userprofile_logo from "../../assets/user-profile.png";
 import Divider from "@material-ui/core/Divider";
+import Login from "../../screens/login/Login";
 
 export default function ProfileMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -14,6 +15,8 @@ export default function ProfileMenu() {
 
   const handleClose = () => {
     setAnchorEl(null);
+    sessionStorage.removeItem("access-token");
+    // <Login />;
   };
 
   return (

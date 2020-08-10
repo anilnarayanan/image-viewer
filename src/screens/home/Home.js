@@ -4,7 +4,6 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import Header from "../../common/header/Header";
-import ProfilePhotos from "../../screens/profile_photos/ProfilePhotos";
 import { Grid, Paper } from "@material-ui/core";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
@@ -80,14 +79,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        {console.log("Bingo")}
-        {console.log(this.state.payload)}
-
-        {this.state.payload.map((el) => ({ el }))}
-        {/* </ul> */}
-
-        {/* {this.state.payload.data.map((ids) => ( */}
-        {/* <Grid
+        <Grid
           container
           spacing={2}
           className={useStyles.grid}
@@ -97,14 +89,41 @@ class Home extends Component {
           <Grid item xs={10} md={5}>
             <Card>
               <CardHeader
-                // avatar=<img src={userprofile_logo} width="50" height="50" />
-                // title={ids["username"]}
-                subheader={new Date().toLocaleString()}
+                avatar=<img src={userprofile_logo} width="50" height="50" />
+                title="Shrimp and Chorizo Paella"
+                subheader="September 14, 2016"
+                Anil
+                Narayanan
               />
+              <CardContent>
+                <Typography paragraph>Method:</Typography>
+                <Typography paragraph>
+                  Heat 1/2 cup of the broth in a pot until simmering, add
+                  saffron and set aside for 10 minutes.
+                </Typography>
+              </CardContent>
             </Card>
           </Grid>
-        </Grid> */}
-        {/* ))} */}
+          <Grid item xs={10} md={5}>
+            <Card>
+              <CardHeader
+                avatar=<img src={userprofile_logo} width="50" height="50" />
+                title="Shrimp and Chorizo Paella"
+                subheader="September 14, 2016"
+                Anil
+                Narayanan
+              />
+              <CardContent>
+                <Typography paragraph>Method:</Typography>
+                <Typography paragraph>
+                  Heat 1/2 cup of the broth in a pot until simmering, add
+                  saffron and set aside for 10 minutes.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+        )
       </div>
     );
   }

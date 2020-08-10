@@ -49,7 +49,6 @@ class Login extends Component {
       });
       sessionStorage.setItem("access-token", this.state.instaToken);
       sessionStorage.setItem("username", this.state.uname);
-      alert("success");
     } else if (this.state.username === "" && this.state.password === "") {
       this.setState({
         usernameValidation: "dispBlock",
@@ -61,7 +60,6 @@ class Login extends Component {
         passwordValidation: "dispNone",
         credentialValidation: "dispBlock",
       });
-      alert("fail");
     }
   };
 
@@ -71,7 +69,6 @@ class Login extends Component {
         <div>
           <Header />
         </div>
-        {/* <div className="login_card"> */}
         <div className={this.state.login_card_display}>
           <Card>
             <CardContent>
