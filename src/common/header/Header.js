@@ -22,16 +22,20 @@ class Header extends Component {
     return (
       <div>
         {sessionStorage.getItem("access-token") === "null" ? (
-          <header className="app_header">
-            <div className="app_logo">Image Viewer</div>
-          </header>
+          <div>
+            <header className="app_header">
+              <div className="app_logo">Image Viewer</div>
+            </header>
+          </div>
         ) : (
-          <header className="app_header">
-            <div className="app_logo">Image Viewer</div>
-            <SearchBar />
-            <ProfileMenu />
+          <div>
+            <header className="app_header">
+              <div className="app_logo">Image Viewer</div>
+              <SearchBar />
+              <ProfileMenu />
+            </header>
             <Home />
-          </header>
+          </div>
         )}
       </div>
     );

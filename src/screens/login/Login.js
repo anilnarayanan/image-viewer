@@ -8,7 +8,6 @@ import CardContent from "@material-ui/core/CardContent";
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
-import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import "./Login.css";
@@ -25,8 +24,8 @@ class Login extends Component {
       passwordValidation: "dispNone",
       credentialValidation: "dispNone",
       instaToken:
-        "IGQVJVZAGVhYWRqZAUhfY21wZAEtEcnBXazd6d2JuMU5EMlYxdDBqSWhfenVleS1sc2NXOXJtdjRlZAjQ3X1Vianp4dzFLNnJla1E4WEQ2TDhkTGlzaUpUU2owYkgyaVJRRTlGTmJiV2VycW0yV2tBVkdJTgZDZD",
-      uname: "anilnarayanan@hotmail.com",
+        "IGQVJWejRhd2FQQWdTY0NOQzh1SFVQS3BTTzJtS1pGRGlJR3RXUi02WVZA4bW9UUVhtSEsxRDc0YWlVaVJaeFU5QmVOdnRQZAU52MmsyVVVDTWpBaUFaMlRlV1UweUdEWHZAESGxzWHhlREg5VUR1cnVqXwZDZD",
+      uname: "anilnarayanan",
       pwd: "welcome123",
     };
   }
@@ -49,6 +48,7 @@ class Login extends Component {
         credentialValidation: "dispNone",
       });
       sessionStorage.setItem("access-token", this.state.instaToken);
+      sessionStorage.setItem("username", this.state.uname);
       alert("success");
     } else if (this.state.username === "" && this.state.password === "") {
       this.setState({
