@@ -5,6 +5,8 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import "./Header.css";
 
+// Method to display Search bar on header
+
 export default function SearchBar() {
   return (
     <div className="search_box">

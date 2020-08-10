@@ -40,11 +40,13 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
+      // Saving authentication token in session storage
       instaToken: sessionStorage.getItem("access-token"),
       payload: [],
     };
   }
 
+  // On component mount, fetch session token and gather media details of respective user from instagram
   componentDidMount() {
     const url =
       "https://graph.instagram.com/me/media?fields=id,caption&access_token=" +
@@ -55,26 +57,6 @@ class Home extends Component {
       .then((json) => this.setState({ payload: json.data }));
     console.log(this.state.payload);
   }
-
-  // fetchProfileMediaId = async () => {
-  //   const url =
-  //     "https://graph.instagram.com/me/media?fields=id,caption&access_token=";
-  //   let response = await fetch(url + sessionStorage.getItem("access-token"));
-  //   if (response.ok) {
-  //     this.setState({ payload: await response.json() });
-  //     return this.state.payload;
-  //   } else {
-  //     console.log("HTTP-Error: " + response.status);
-  //     return 0;
-  //   }
-  // };
-
-  // fetchProfileDetailsById = () => {
-  //   let i;
-  //   for (i in this.state.payload.data) {
-  //     console.log(this.state.payload.data[i]["id"]);
-  //   }
-  // };
 
   render() {
     return (
@@ -127,27 +109,6 @@ class Home extends Component {
       </div>
     );
   }
-}
-
-{
-  /* <Grid item xs={10} md={5}>
-            <Card>
-              <CardHeader
-                avatar=<img src={userprofile_logo} width="50" height="50" />
-                title="Shrimp and Chorizo Paella"
-                subheader="September 14, 2016"
-                Anil
-                Narayanan
-              />
-              <CardContent>
-                <Typography paragraph>Method:</Typography>
-                <Typography paragraph>
-                  Heat 1/2 cup of the broth in a pot until simmering, add
-                  saffron and set aside for 10 minutes.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid> */
 }
 
 export default Home;

@@ -6,6 +6,7 @@ import "fontsource-roboto";
 
 ReactDOM.render(
   <div>
+    {/* Redirection to Login page */}
     <Login />
   </div>,
   document.getElementById("root")

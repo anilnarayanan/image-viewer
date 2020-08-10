@@ -23,21 +23,26 @@ class Login extends Component {
       password: "",
       passwordValidation: "dispNone",
       credentialValidation: "dispNone",
+      // Instagram token
       instaToken:
         "IGQVJWejRhd2FQQWdTY0NOQzh1SFVQS3BTTzJtS1pGRGlJR3RXUi02WVZA4bW9UUVhtSEsxRDc0YWlVaVJaeFU5QmVOdnRQZAU52MmsyVVVDTWpBaUFaMlRlV1UweUdEWHZAESGxzWHhlREg5VUR1cnVqXwZDZD",
+      // Login username & password
       uname: "anilnarayanan",
       pwd: "welcome123",
     };
   }
 
+  // Username change handler
   inputUsernameChangeHandler = (e) => {
     this.setState({ username: e.target.value });
   };
 
+  // Password change handler
   inputPasswordChangeHandler = (e) => {
     this.setState({ password: e.target.value });
   };
 
+  // On click handler
   loginClickHandler = () => {
     if (
       this.state.uname === this.state.username &&
@@ -47,8 +52,8 @@ class Login extends Component {
         login_card_display: "dispNone",
         credentialValidation: "dispNone",
       });
+      // Storing authentication token in session storage
       sessionStorage.setItem("access-token", this.state.instaToken);
-      sessionStorage.setItem("username", this.state.uname);
     } else if (this.state.username === "" && this.state.password === "") {
       this.setState({
         usernameValidation: "dispBlock",

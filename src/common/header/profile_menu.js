@@ -6,13 +6,17 @@ import userprofile_logo from "../../assets/user-profile.png";
 import Divider from "@material-ui/core/Divider";
 import Login from "../../screens/login/Login";
 
+// Method to display user profile menu on header
+
 export default function ProfileMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
+  // On account menu item selection
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
+  // On logout menu item selection
   const handleClose = () => {
     setAnchorEl(null);
     sessionStorage.removeItem("access-token");
